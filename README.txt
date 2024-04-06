@@ -21,3 +21,4 @@ colChangeFunc() - Changes the theme of the website, cycling through 3 preset opt
 notifyColChange() - Shows a notification at top and center of screen on colour change
 formSubmit() - Submits the entry form that sets the current HP and Grit points to the inputted values
 
+HOSTED VERSION: https://elliotgba.github.io/
