@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>Levi LeMaine Character Sheet</title>
+		<link rel="shortcut icon" href="files/favicon.ico">
+	</head>
+
+	<body>
+
+		<!-- NAVIGATION -->
+		<nav class="navMenu sticky">
+			<a href="index.html" id="name">Levi LeMaine</a>
+			<a href="index.html">Sheet</a>
+			<a href="references.html">References</a>
+			<a href="backstory.html">Backstory</a>
+			<a href="http://24.144.173.166:30000/" target="_blank">Foundry</a>
+			<button id="colChangeButton" title="Theme"><i class="fa-solid fa-palette"></i></button>
+		</nav>
+
+		<!-- COL CHANGE NOTIFICATION -->
+		<div id="colChangeNotification" class="sticky">
+			<i class="fa fa-info-circle spin"></i>
+			&nbsp; &nbsp;
+			<span>Theme Changed!</span>
+		</div>
+
+		<!-- HP AND STUFF FORM -->
+		<div class="formBox">
+				<form class="form" id="form">
+					<h2>Update Values</h2>
+					<label for="hpInput">HP</label>
+					<input type="text" id="hpInput"><br><br>
+					<label for="tempHpInput">TEMP HP</label>
+					<input type="text" id="tempHpInput"><br><br>
+					<label for="gritInput">GRIT</label>
+					<input type="text" id="gritInput"><br><br>
+					<input type="button" onclick="formSubmit()" value="UPDATE">
+				</form>
+		</div>
+
+		<!-- MAIN FLEX BOX -->
+		<div class="main">
+
+			<!-- ABILITIES -->
+			<div class="abilities">
+				<h2>ABILITIES</h2>
+				<div class="abilityContainer">
+					<div class="div1 tag str">STR</div>
+					<div class="div2 tag">CON</div>
+					<div class="div3 tag">DEX</div>
+					<div class="div4 tag">WIS</div>
+					<div class="div5 tag">INT</div>
+					<div class="div6 tag">CHA</div>
+					<div class="div7 abl">10</div>
+					<div class="div8 abl">+0</div>
+					<div class="div9 abl">14</div>
+					<div class="div10 abl">+2</div>
+					<div class="div11 abl">18</div>
+					<div class="div12 abl">+4</div>
+					<div class="div13 abl">9</div>
+					<div class="div14 abl">-1</div>
+					<div class="div15 abl">11</div>
+					<div class="div16 abl">+0</div>
+					<div class="div17 abl">18</div>
+					<div class="div18 abl">+4</div>
+				</div>
+			</div>
+
+			<!-- SKILLS -->
+			<div class="skillContainer">
+				<ul class="skillTable">
+					<h2>SKILLS</h2>
+					<li class="skillHeader">
+						<div class="col modCol" style="color: var(--foreground)"><b>MOD.</b></div>
+						<div class="col profCol" style="color: var(--foreground)"><b>PROF.</b></div>
+						<div class="col skillCol" style="color: var(--foreground)"><b>SKILL</b></div>
+						<div class="col bonusCol" style="color: var(--foreground)"><b>BONUS</b></div>
+					</li>
+					<li class="skillRow">
+						<div class="col modCol">DEX</div>
+						<div class="col profCol"><i class="fa-regular fa-circle"></i></i></div>
+						<div class="col skillCol">Acrobatics</div>
+						<div class="col bonusCol">+4</div>
+					</li>
+					<li class="skillRow">
+						<div class="col modCol">WIS</div>
+						<div class="col profCol"><i class="fa-regular fa-circle"></i></div>
+						<div class="col skillCol">Animal Handling</div>
+						<div class="col bonusCol">-1</div>
+					</li>
+					<li class="skillRow">
+						<div class="col modCol">INT</div>
+						<div class="col profCol"><i class="fa-regular fa-circle"></i></div>
+						<div class="col skillCol">Arcana</div>
+						<div class="col bonusCol">+0</div>
+					</li>
+					<li class="skillRow">
+						<div class="col modCol">STR</div>
+						<div class="col profCol"><i class="fa-regular fa-circle"></i></div>
+						<div class="col skillCol">Athletics</div>
+						<div class="col bonusCol">+0</div>
+					</li>
+					<li class="skillRow">
+						<div class="col modCol">CHA</div>
+						<div class="col profCol"><i class="fa-solid fa-circle"></i></div>
+						<div class="col skillCol">Deception</div>
+						<div class="col bonusCol">+6</div>
+					</li>
+					<li class="skillRow">
+						<div class="col modCol">INT</div>
+						<div class="col profCol"><i class="fa-regular fa-circle"></i></div>
+						<div class="col skillCol">History</div>
+						<div class="col bonusCol">+0</div>
+					</li>
+					<li class="skillRow">
+						<div class="col modCol">WIS</div>
+						<div class="col profCol"><i class="fa-regular fa-circle"></i></div>
+						<div class="col skillCol">Insight</div>
+						<div class="col bonusCol">-1</div>
+					</li>
+					<li class="skillRow">
+						<div class="col modCol">CHA</div>
+						<div class="col profCol"><i class="fa-solid fa-circle"></i></div>
+						<div class="col skillCol">Intimidation</div>
+						<div class="col bonusCol">+6</div>
+					</li>
+					<li class="skillRow">
+						<div class="col modCol">INT</div>
+						<div class="col profCol"><i class="fa-regular fa-circle"></i></div>
+						<div class="col skillCol">Investigation</div>
+						<div class="col bonusCol">+0</div>
+					</li>
+					<li class="skillRow">
+						<div class="col modCol">WIS</div>
+						<div class="col profCol"><i class="fa-regular fa-circle"></i></div>
+						<div class="col skillCol">Medicine</div>
+						<div class="col bonusCol">+0</div>
+					</li>
+					<li class="skillRow">
+						<div class="col modCol">INT</div>
+						<div class="col profCol"><i class="fa-regular fa-circle"></i></div>
+						<div class="col skillCol">Nature</div>
+						<div class="col bonusCol">+0</div>
+					</li>
+					<li class="skillRow">
+						<div class="col modCol">WIS</div>
+						<div class="col profCol"><i class="fa-regular fa-circle"></i></div>
+						<div class="col skillCol">Perception</div>
+						<div class="col bonusCol">-1</div>
+					</li>
+					<li class="skillRow">
+						<div class="col modCol">CHA</div>
+						<div class="col profCol"><i class="fa-regular fa-circle"></i></div>
+						<div class="col skillCol">Performance</div>
+						<div class="col bonusCol">+4</div>
+					</li>
+					<li class="skillRow">
+						<div class="col modCol">CHA</div>
+						<div class="col profCol"><i class="fa-solid fa-circle"></i></div>
+						<div class="col skillCol">Persuasion</div>
+						<div class="col bonusCol">+6</div>
+					</li>
+					<li class="skillRow">
+						<div class="col modCol">INT</div>
+						<div class="col profCol"><i class="fa-regular fa-circle"></i></div>
+						<div class="col skillCol">Religion</div>
+						<div class="col bonusCol">+0</div>
+					</li>
+					<li class="skillRow">
+						<div class="col modCol">DEX</div>
+						<div class="col profCol"><i class="fa-solid fa-circle"></i></div>
+						<div class="col skillCol">Sleight of Hand</div>
+						<div class="col bonusCol">+6</div>
+					</li>
+					<li class="skillRow">
+						<div class="col modCol">DEX</div>
+						<div class="col profCol"><i class="fa-solid fa-circle"></i></div>
+						<div class="col skillCol">Stealth</div>
+						<div class="col bonusCol">+6</div>
+					</li>
+					<li class="skillRow">
+						<div class="col modCol">WIS</div>
+						<div class="col profCol"><i class="fa-regular fa-circle"></i></div>
+						<div class="col skillCol">Survival</div>
+						<div class="col bonusCol">-1</div>
+					</li>
+				</ul>
+			</div>
+
+			<!-- STATS COL -->
+			<div class="statsCol">
+
+				<!-- STATS TABLE (AC, Initiative, Prof., etc...) -->
+				<div class="stats">
+					<table>
+						<h2 class="class">Gunslinger 2</h2>
+						<h2 class="ancestry">Hobgoblin</h2>
+						<tr>
+							<th>AC</th>
+							<th>Initiative</th>
+							<th>Proficiency</th>
+							<th>Speed</th>
+						</tr>
+						<tr>
+							<td>16</td>
+							<td>+4</td>
+							<td>+2</td>
+							<td>30ft.</td>
+						</tr>
+					</table>
+				</div>
+
+				<!-- HP -->
+				<div class="hpContainer">
+					<div class="hpBox inner">
+						<h2>HP</h2>
+						<input id="sheetHP" type="text" value="20">
+						<h2 id="maxHP">/ 20</h2>
+					</div>
+					<div class="tempHpBox inner">
+						<h2>Temp HP</h2>
+						<input type="text" id="sheetTempHP">
+					</div>
+					<div class="hitDiceBox inner">
+						<h2>Hit Dice</h2>
+						<input type="text" value="2">
+						<h2>2 : d10</h2>
+					</div>
+				</div>
+
+				<!-- SAVES -->
+				<div class="savesContainer">
+					<h2>Saving Throws</h2>
+					<div class="savesTable">
+						<table>
+							<tr>
+								<th>STR</th>
+								<th>CON</th>
+								<th>DEX</th>
+								<th>WIS</th>
+								<th>INT</th>
+								<th>CHA</th>
+							</tr>
+							<tr>
+								<td class="savingMod">+0</td>
+								<td class="savingMod">+6</td>
+								<td class="savingMod">+2</td>
+								<td class="savingMod">+0</td>
+								<td class="savingMod">-1</td>
+								<td class="savingMod">+6</td>
+							</tr>
+							<tr>
+								<td><i class="fa-regular fa-circle icon"></i></td>
+								<td><i class="fa-solid fa-circle icon"></i></td>
+								<td><i class="fa-regular fa-circle icon"></i></td>
+								<td><i class="fa-regular fa-circle icon"></i></td>
+								<td><i class="fa-regular fa-circle icon"></i></td>
+								<td><i class="fa-solid fa-circle icon"></i></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+
+				<!-- SENSES & DEFENSES -->
+				<div class="sensesContainer">
+					<div class="senses">
+						<h3 class="sensesTitle">Senses</h3>
+						<div class="sensesBox">
+							Darkvision
+						</div>
+					</div>
+					<div class="passiveSenses">
+						<h3 class="sensesTitle">Passives</h3>
+						<div class="sensesBox">
+							WIS : 9 <br>
+							INT : 10
+						</div>
+					</div>
+					<div class="defenses">
+						<h3 class="sensesTitle">Resistances</h3>
+						<div class="sensesBox">
+							Charmed
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- PICTURE COL -->
+			<div class="pictureContainer">
+				<!-- PICTURE -->
+				<div class="picture">
+					<a href="references.html">
+						<img align="center" src="files/LeviHeadshot1.png" alt="Levi LeMaine" width=200px>
+					</a>
+				</div>
+
+				<!-- GRIT AND TRICK -->
+				<div class="gritTrickContainer">
+					<div>
+						<h3 class="gtBox">Grit Points</h3>
+						<div class="gritBox">
+							<input type="text" value="5" id="sheetGrit"><h2 id="maxGrit">/ 5</h2>
+						</div>
+					</div>
+					<div>
+						<h3 class="gtBox">Trick Save DC</h3>
+						<div class="trickBox">
+							<h2>14</h2>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- TRICKS -->
+				<div class="tricksContainer">
+					<h2>Tricks</h2>
+					<ul class="trickList">
+						<li class="trickItem">
+							<div class="trickName deadeye">Deadeye Shot</div>
+							<div class="deadeyeShotHidden">
+								When you make a firearm attack against a creature, you can expend one grit point to gain advantage on the attack roll.
+							</div>
+							<div class="trickCost">1 Grit Point</div>
+						</li>
+						<li class="trickItem">
+							<div class="trickName forceShot">Forceful Shot</div>
+							<div class="forceShotHidden">
+								When you make a firearm attack against a creature, you can expend one grit point to attempt to trip them up and force them back. On a hit, the creature suffers normal damage and must succeed on a Strength saving throw or be pushed 15 feet away from you. If the creature being pushed is pushed into another creature or object of significant size, they take an additional 1d6 Bludgeoning Damage from the attack.
+							</div>
+							<div class="trickCost">1 Grit Point</div>
+						</li>
+						<li class="trickItem">
+							<div class="trickName smokescreen">Smokescreen</div>
+							<div class="smokescreenHidden">
+								As a Bonus Action you fire into the ground to kick up dust and dirt into a cloud that heavily obscures vision in a 10ft Radius centered on you for the remainder of your turn. Whenever you move within the cloud, you do not provoke Attacks of Opportunity.
+							</div>
+							<div class="trickCost">Bonus Action</div>
+						</li>
+					</ul>
+				</div>
+
+				<!-- DARES -->
+				<div class="daresContainer">
+					<h2>Dares</h2>
+					<div class="daresBox">
+						<div class="daresTitle ffTitle">Fancy Footwork</div>
+						<div class="ffHidden">Whenever you succeed on a cumulative two Dexterity Saving Throws once this Dare is Activated, you regain 1 Grit Point. Alternatively, if you succeed on a Dexterity Saving Throw by 10 or more, you immediately gain 1 Grit Point.</div>
+						<div class="daresTitle rlhTitle">Run Like Hell</div>
+						<div class="rlhHidden">Your Movement Speed Increases by 10. Whenever you move a cumulative 100 feet in combat once this Dare is Activated, you regain 1 Grit Point. </div>
+					</div>
+				</div>
+			</div>
+
+			<!-- INVENTORY COL -->
+			<div class="inventoryCol">
+
+				<!-- INVENTORY -->
+				<div class="inventoryContainer">
+					<h2>Inventory</h2>
+					<ul class="inventoryList list">
+						<li>Revolver</li>
+						<li>Backpack</li>
+						<li>Clothes, Travelers</li>
+						<li>Dagger</li>
+						<li>Ink & Pen</li>
+						<li>Studded Leather</li>
+						<li>Bag of Sand</li>
+						<li>Viol</li>
+						<li>Disguise Kit</li>
+						<li>Playing Cards (marked)</li>
+						<li>Clothes, Fine</li>
+					</ul>
+				</div>
+
+				<!-- PROFICIENCIES -->
+				<div class="proficiencies">
+					<h2>Proficiencies</h2>
+					<ul class="proficienciesList list">
+						<li>Light Armour</li>
+						<li>Simple Weapons</li>
+						<li>Firearms</li>
+						<li>Tinker's Tools</li>
+						<li>Disguise Kit</li>
+						<li>Forgery Kit</li>
+					</ul>
+				</div>
+
+				<!-- LANGUAGES -->
+				<div class="languages">
+					<h2>Languages</h2>
+					<ul class="languagesList list">
+						<li>Common</li>
+						<li>Sylvan</li>
+					</ul>
+				</div>
+
+			</div>
+
+			<!-- ACTIONS -->
+			<div class="actionsContainer">
+
+				<!-- ATTACKS -->
+				<div class="attackContainer">
+					<h2>Attacks</h2>
+					<ul class="attackList">
+						<li class="attackHeader">
+							<div class="weaponCol">Weapon</div>
+							<div class="rangeCol">Range</div>
+							<div class="hitCol">Hit</div>
+							<div class="damageCol">Damage</div>
+						</li>
+						<li class="attackRow">
+							<div class="weaponCol">Revolver</div>
+							<div class="rangeCol">60 / 240ft.</div>
+							<div class="hitCol">+6</div>
+							<div class="damageCol">1d10 Piercing</div>
+						</li>
+						<li class="attackRow">
+							<div class="weaponCol">Dagger</div>
+							<div class="rangeCol">5ft.</div>
+							<div class="hitCol">+6</div>
+							<div class="damageCol">1d4 Piercing</div>
+						</li>
+						<li class="attackRow">
+							<div class="weaponCol">Unarmed</div>
+							<div class="rangeCol">5ft.</div>
+							<div class="hitCol">+2</div>
+							<div class="damageCol">1 Bludgeoning</div>
+						</li>
+					</ul>
+				</div>
+
+				<!-- ACTIONS IN COMBAT -->
+				<div class="actionsInCombatContainer">
+					<h2>Actions in Combat</h2>
+					<div class="actionsList">
+						Attack, Cast a Spell, Dash, Disengage, Dodge, Grapple, Help, Hide, Improvise, Ready, Search, Shove, Use an Object
+					</div>
+				</div>
+
+			</div>
+
+			<!-- FEATS COL -->
+
+			<div class="featsColContainer">
+
+				<!-- FEATS -->
+				<div class="featsContainer">
+					<h2>Feats</h2>
+					<div class="afBox">
+						<div class="featTitle">
+							<div class="featTitleText">Sharpshooter</div>
+						</div>
+						<div class="sharpshooterDesc">You have mastered ranged weapons and can make...</div>
+						<div class="sharpshooterHidden">
+							You have mastered ranged weapons and can make shots that others find impossible. You gain the following benefits:<br><br>
+							Attacking at long range doesn't impose disadvantage on your ranged weapon attack rolls.<br><br>
+							Your ranged weapon attacks ignore half and three-quarters cover.<br><br>
+							Before you make an attack with a ranged weapon that you are proficient with, you can choose to take a -5 penalty to the attack roll. If that attack hits, you add +10 to the attack's damage.
+						</div>
+					</div>
+				</div>
+
+				<!-- ANCESTRY FEATS -->
+				<div class="ancestryFeatsContainer">
+					<h2>Ancestry Feats</h2>
+
+					<div class="ancestryFeats">
+						<div class="featTitle">
+							<div class="featTitleText">Fortune from the Many</div>
+						</div>
+						<div class="fftmDesc">If you miss with an attack roll or fail an ability check...</div>
+						<div class="fftmHidden">If you miss with an attack roll or fail an ability check or a saving throw, you can draw on your bonds of reciprocity to gain a bonus to the roll equal to the number of allies you can see within 30 feet of you (maximum bonus of +3). You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</div>
+					</div>
+
+					<div class="ancestryFeats">
+						<div class="featTitle">
+							<div class="featTitleText">Fey Gift</div>
+						</div>
+						<div class="fgDesc">You can use this trait to take the Help action as a...</div>
+						<div class="fgHidden">
+							You can use this trait to take the Help action as a bonus action, and you can do so a number of times equal to your proficiency bonus. You regain all expended uses when you finish a long rest.<br><br>
+							Starting at 3rd level, choose one of the options below each time you take the Help action with this trait:<br><br>
+							- Hospitality. You and the creature you help each gain a number of temporary hit points equal to 1d6 plus your proficiency bonus.<br>
+							- Passage. You and the creature you help each increase your walking speeds by 10 feet until the start of your next turn.<br>
+							- Spite. Until the start of your next turn, the first time the creature you help hits a target with an attack roll, that target has disadvantage on the next attack roll it makes within the next minute.
+						</div>
+					</div>
+
+					<div class="ancestryFeats">
+						<div class="featTitle">
+							<div class="featTitleText">Fey Ancestry</div>
+						</div>
+						<div class="faDesc">You have advantage on saving throws...</div>
+						<div class="faHidden">
+							You have advantage on saving throws you make to avoid or end the charmed condition on yourself.
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- CLASS FEATURES -->
+			<div class="classFeaturesContainer">
+				<h2>Class Features</h2>
+
+				<div class="classFeats">
+					<div class="featTitle">
+						<div class="featTitleText">Grit</div>
+					</div>
+					<div class="fftmDesc">You gain a number of grit points equal to 1 + the modifier...</div>
+					<div class="fftmHidden">
+						Choose Intelligence, Wisdom, or Charisma. You gain Proficiency in the Saving Throw of the Ability you chose.<br><br>
+
+						You gain a number of grit points equal to 1 + The Modifier of Ability you chose with this feature. These grit points can be used to perform exceptional feats in combat.<br><br>
+
+						You regain 1 expended grit point each time you critically hit with an attack using a firearm, or deal a killing blow with a firearm to a creature of significant threat (DM’s discretion).<br><br>
+
+						You regain all expended grit points after a Short Rest.
+					</div>
+				</div>
+
+				<div class="classFeats">
+					<div class="featTitle">
+						<div class="featTitleText">Gunsmith</div>
+					</div>
+					<div class="fgDesc">You gain proficiency with Tinker’s Tools...</div>
+					<div class="fgHidden">
+						You gain proficiency with Tinker’s Tools. You may use them to craft ammunition at half the cost, repair damaged firearms, or even draft and create new ones (DM’s discretion). Some extremely experimental and intricate firearms are only available through crafting.
+					</div>
+				</div>
+
+				<div class="classFeats">
+					<div class="featTitle">
+						<div class="featTitleText">Tricks</div>
+					</div>
+					<div class="faDesc">When you become a Gunslinger, you choose up to...</div>
+					<div class="faHidden">
+						At 1st Level when you become a Gunslinger, you choose up to three Tricks from the list below. Each Trick requires at least 1 Grit Point to utilize unless otherwise stated. As you gain levels as a Gunslinger, you gain access to new and more useful tricks to add to your arsenal.<br><br>
+
+						Exchanging Tricks<br>
+						Each time you gain a level as a Gunslinger you may exchange one trick you know for another however you may only select a trick from one tier higher when doing so (No Requirement to 5th Level, 5th Level to 10th Level, 10th Level to 15th Level.).<br>
+						For example, say you are a 15th Level Gunslinger gaining access to 15th Level Tricks for the first time and you have Deadeye Shot as one of your chosen Tricks. You may exchange your Deadeye Shot for any trick from the No Requirements list and the 5th Level list but not any higher, for this example we’ll say you choose a 5th Level Tier Trick. When you become a 16th Level Gunslinger, you can exchange that 5th Level Tier Trick for a 10th Level Tier Trick but no higher, at 17th Level you may exchange that 10th Level Tier Trick for a 15th Level Tier Trick.<br><br>
+
+						Getting New Tricks<br>
+						At 5th, 9th, 13th, 17th, and 20th Gunslinger Levels you gain an additional trick. You immediately select the additional trick gained at the previously mentioned levels and do not count as Exchanging a Trick. This new Trick may be chosen at the highest Level Tier allowed.<br><br>
+
+						Trick Save DC<br>
+						Some of your Tricks require a target to make a Saving Throw to resist or evade it. Your Trick Save DC is determined as follows:<br>
+						Trick Save DC = 8 + Your Proficiency Bonus + Your Dexterity Modifier
+					</div>
+				</div>
+
+				<div class="classFeats">
+					<div class="featTitle">
+						<div class="featTitleText">Dares</div>
+					</div>
+					<div class="faDesc">Dares present an additional method of regaining grit...</div>
+					<div class="faHidden">
+						Dares present an additional method of regaining Grit Points and only become active when you run out of Grit Points. At 2nd Level when you gain this feature, you select two of the options listed below as Dares. At 11th level, you may select a third Dare from the list.<br><br>
+
+						Fancy Footwork<br>
+						Whenever you succeed on a cumulative two Dexterity Saving Throws once this Dare is Activated, you regain 1 Grit Point. Alternatively, if you succeed on a Dexterity Saving Throw by 10 or more, you immediately gain 1 Grit Point.<br><br>
+
+						Bumbling Fool<br>
+						Whenever you Critically Miss on an Attack twice once this Dare is Activated, you regain 2 Grit Points.<br><br>
+
+						Run Like Hell<br>
+						Your Movement Speed Increases by 10. Whenever you move a cumulative 100 feet in combat once this Dare is Activated, you regain 1 Grit Point.<br><br>
+
+						Frantically Nimble<br>
+						Whenever a cumulative three Ranged Weapon or Spell Attacks miss you once this Dare is Activated, you regain 1 Grit Point.<br><br>
+
+						Death’s Presence<br>
+						Whenever you are Stabilized or Regain Hit Points whilst you have 0 Hit Points once this Dare is Activated, you regain 2 Grit Points.<br><br>
+
+						Seeing Red<br>
+						Whenever another creature Critically Hits you, you regain 1 Grit Point. Optionally, when you activate your Dares, you may choose to allow creatures to Critically Hit you on a 19 or 20, when you do you gain 2 Grit Points instead of 1
+					</div>
+				</div>
+
+				<div class="classFeats">
+					<div class="featTitle">
+						<div class="featTitleText">Flash the Iron</div>
+					</div>
+					<div class="fgDesc">You can shake the resolve of your enemies...</div>
+					<div class="fgHidden">
+						You can use the powerful blast and thundering sound of your firearm to shake the resolve of a creature.<br><br>
+
+						When making a Charisma (Deception), Charisma (Intimidation), or Charisma (Persuasion) check you may optionally draw a Firearm as part of the check in an attempt to flash your iron and add impact to your words and actions. When doing so you gain Advantage on the check, however upon failing the check, the creature or creature you were attempting to sway becomes immediately hostile.<br><br>
+
+						A creature prone to violence might attack you. Another creature might seek retribution in other ways (at the DM’s discretion), depending on the nature of your interaction with it.
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</body>
+
+	<footer>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script src="https://kit.fontawesome.com/9974f1b16a.js" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="script.js"></script>
+	</footer>
+
+</html>
